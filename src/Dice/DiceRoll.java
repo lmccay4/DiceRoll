@@ -75,10 +75,6 @@ public class DiceRoll {
 				mode = occurrences6;
 				modeLabel = "6";
 			}
-		
-			System.out.println(totalRoll);
-			System.out.println(lineNum);
-
 			
 			//Calculate average
 			average = (float)totalRoll/lineNum;
