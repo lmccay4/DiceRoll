@@ -31,7 +31,7 @@ public class DiceRoll {
 					roll = randomInt(1, 6);
 					rollsArray.add(roll);
 					totalRoll += roll;
-					System.out.println("Roll #" + lineNum + ": " + roll + " ");
+					System.out.println("Roll #" + (lineNum+1) + ": " + roll + " ");
 					lineNum++;
 				}
 		
