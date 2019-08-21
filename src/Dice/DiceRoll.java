@@ -21,9 +21,9 @@ public class DiceRoll {
 		
 			int roll = 0;
 			int totalRoll = 0;
-			int average;
+			float average;
 			int mode;
-			int lineNum = 1;
+			int lineNum = 0;
 			double stdDev = 0.0;
 			System.out.println(input + " Rolls of The Dice:");
 			for (int i = 0; i < input; i++)
@@ -35,8 +35,7 @@ public class DiceRoll {
 					lineNum++;
 				}
 		
-			//Find mode
-			// make this a hashmap eventually
+			//Calculate mode (make this a hashmap eventually)
 			int occurrences1 = Collections.frequency(rollsArray, 1);
 			int occurrences2 = Collections.frequency(rollsArray, 2);
 			int occurrences3 = Collections.frequency(rollsArray, 3);
@@ -77,11 +76,15 @@ public class DiceRoll {
 				modeLabel = "6";
 			}
 		
+			System.out.println(totalRoll);
+			System.out.println(lineNum);
 
-			average = (totalRoll/lineNum);
+			
+			//Calculate average
+			average = (float)totalRoll/lineNum;
 		
 			//Calculate standard deviation 
-			for (double number: rollsArray) {
+			for (int number: rollsArray) {
 				stdDev += Math.pow(number - average, 2);
 			}
 		
